@@ -239,7 +239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.23.2":
+"@babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.24.0":
   version: 7.24.1
   resolution: "@babel/runtime@npm:7.24.1"
   dependencies:
@@ -456,7 +456,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:14.1.4, @next/eslint-plugin-next@npm:^14.1.1":
+"@next/eslint-plugin-next@npm:14.1.4":
   version: 14.1.4
   resolution: "@next/eslint-plugin-next@npm:14.1.4"
   dependencies:
@@ -600,6 +600,37 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-compose-refs@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@radix-ui/react-compose-refs@npm:1.0.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.13.10"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/be06f8dab35b5a1bffa7a5982fb26218ddade1acb751288333e3b89d7b4a7dfb5a6371be83876dac0ec2ebe0866d295e8618b778608e1965342986ea448040ec
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-slot@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@radix-ui/react-slot@npm:1.0.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.13.10"
+    "@radix-ui/react-compose-refs": "npm:1.0.1"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/3af6ea4891e6fa8091e666802adffe7718b3cd390a10fa9229a5f40f8efded9f3918ea01b046103d93923d41cc32119505ebb6bde76cad07a87b6cf4f2119347
+  languageName: node
+  linkType: hard
+
 "@repo/eslint-config@npm:*, @repo/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@repo/eslint-config@workspace:packages/eslint-config"
@@ -614,6 +645,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@repo/tailwind-config@npm:*, @repo/tailwind-config@workspace:packages/tailwind-config":
+  version: 0.0.0-use.local
+  resolution: "@repo/tailwind-config@workspace:packages/tailwind-config"
+  dependencies:
+    "@repo/typescript-config": "npm:*"
+    tailwindcss: "npm:^3.3.0"
+  languageName: unknown
+  linkType: soft
+
 "@repo/typescript-config@npm:*, @repo/typescript-config@workspace:packages/typescript-config":
   version: 0.0.0-use.local
   resolution: "@repo/typescript-config@workspace:packages/typescript-config"
@@ -624,15 +664,23 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@repo/ui@workspace:packages/ui"
   dependencies:
+    "@radix-ui/react-slot": "npm:^1.0.2"
     "@repo/eslint-config": "npm:*"
+    "@repo/tailwind-config": "npm:*"
     "@repo/typescript-config": "npm:*"
     "@turbo/gen": "npm:^1.12.4"
     "@types/eslint": "npm:^8.56.5"
     "@types/node": "npm:^20.11.24"
     "@types/react": "npm:^18.2.61"
     "@types/react-dom": "npm:^18.2.19"
+    class-variance-authority: "npm:^0.7.0"
+    clsx: "npm:^2.1.0"
     eslint: "npm:^8.57.0"
+    lucide-react: "npm:^0.363.0"
     react: "npm:^18.2.0"
+    tailwind-merge: "npm:^2.2.2"
+    tailwindcss: "npm:^3.3.0"
+    tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
@@ -1863,6 +1911,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "class-variance-authority@npm:0.7.0"
+  dependencies:
+    clsx: "npm:2.0.0"
+  checksum: 10c0/e11c57edf4bf50ef1c97bae41d68885afbaaedba26c48b7cc5dfb033390fed7012147e9532168d8c4f3497fce4dff15e20e6e60b8c9c9a4b0fe26b0e804513db
+  languageName: node
+  linkType: hard
+
 "clean-regexp@npm:^1.0.0":
   version: 1.0.0
   resolution: "clean-regexp@npm:1.0.0"
@@ -1913,6 +1970,20 @@ __metadata:
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
   checksum: 10c0/2176952b3649293473999a95d7bebfc9dc96410f6cbd3d2595cf12fd401f63a4bf41a7adbfd3ab2ff09ed60cb9870c58c6acdd18b87767366fabfc163700f13b
+  languageName: node
+  linkType: hard
+
+"clsx@npm:2.0.0":
+  version: 2.0.0
+  resolution: "clsx@npm:2.0.0"
+  checksum: 10c0/c09f43b3144a0b7826b6b11b6a111b2c7440831004eecc02d333533c5e58ef0aa5f2dce071d3b25fbb8c8ea97b45df96c74bcc1d51c8c2027eb981931107b0cd
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "clsx@npm:2.1.0"
+  checksum: 10c0/c09c00ad14f638366ca814097e6cab533dfa1972a358da5b557be487168acbb25b4c1395e89ffa842a8a61ba87a462d2b4885bc9d4f8410b598f3cb339599cdb
   languageName: node
   linkType: hard
 
@@ -2266,26 +2337,6 @@ __metadata:
   checksum: 10c0/03eb4e769f19a027fd5b43b59e8a05e3fd2100ac239ebb0bf9a745de35d449e2f25cfaf3aa3934664551d72856f4ae8b7822016ce5c42c2d27c18ae79429ec42
   languageName: node
   linkType: hard
-
-"docs@workspace:apps/docs":
-  version: 0.0.0-use.local
-  resolution: "docs@workspace:apps/docs"
-  dependencies:
-    "@next/eslint-plugin-next": "npm:^14.1.1"
-    "@repo/eslint-config": "npm:*"
-    "@repo/typescript-config": "npm:*"
-    "@repo/ui": "npm:*"
-    "@types/eslint": "npm:^8.56.5"
-    "@types/node": "npm:^20.11.24"
-    "@types/react": "npm:^18.2.61"
-    "@types/react-dom": "npm:^18.2.19"
-    eslint: "npm:^8.57.0"
-    next: "npm:^14.1.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
 
 "doctrine@npm:^2.1.0":
   version: 2.1.0
@@ -4546,6 +4597,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.363.0":
+  version: 0.363.0
+  resolution: "lucide-react@npm:0.363.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/e18d3710e619f86d9f6686aa6975bba8a20a48c70ef2da231b61b29fe56eff85df463d38d6885345597a0942c940971cd4e81e8e777583c7db2fd8d62160bf20
+  languageName: node
+  linkType: hard
+
 "make-error@npm:^1.1.1":
   version: 1.3.6
   resolution: "make-error@npm:1.3.6"
@@ -4833,7 +4893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:14.1.4, next@npm:^14.1.1":
+"next@npm:14.1.4":
   version: 14.1.4
   resolution: "next@npm:14.1.4"
   dependencies:
@@ -5612,7 +5672,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18, react-dom@npm:^18.2.0":
+"react-dom@npm:^18":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -6468,6 +6528,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tailwind-merge@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "tailwind-merge@npm:2.2.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.24.0"
+  checksum: 10c0/68a5e199848a467aed4f8d1a8d7b6a5b583ff72f1d2801e018bf245eaa41e6564b63ead9e2b708a214cefbd843970c5e0a21754d5f2a20e2c1238e25955685ce
+  languageName: node
+  linkType: hard
+
+"tailwindcss-animate@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "tailwindcss-animate@npm:1.0.7"
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: 10c0/ec7dbd1631076b97d66a1fbaaa06e0725fccfa63119221e8d87a997b02dcede98ad88bb1ef6665b968f5d260fcefb10592e0299ca70208d365b37761edf5e19a
+  languageName: node
+  linkType: hard
+
 "tailwindcss@npm:^3.3.0":
   version: 3.4.3
   resolution: "tailwindcss@npm:3.4.3"
@@ -7073,6 +7151,7 @@ __metadata:
   resolution: "web@workspace:apps/web"
   dependencies:
     "@repo/eslint-config": "npm:*"
+    "@repo/tailwind-config": "npm:*"
     "@repo/typescript-config": "npm:*"
     "@repo/ui": "npm:*"
     "@types/eslint": "npm:^8.56.6"

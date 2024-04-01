@@ -15,7 +15,10 @@ module.exports = {
       },
     },
   ],
+  plugins: ["@typescript-eslint"],
   rules: {
     "no-redeclare": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
   },
 };

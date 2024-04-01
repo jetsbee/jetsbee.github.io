@@ -669,19 +669,23 @@ __metadata:
     "@repo/tailwind-config": "npm:*"
     "@repo/typescript-config": "npm:*"
     "@turbo/gen": "npm:^1.12.4"
-    "@types/eslint": "npm:^8.56.5"
-    "@types/node": "npm:^20.11.24"
-    "@types/react": "npm:^18.2.61"
-    "@types/react-dom": "npm:^18.2.19"
+    "@types/eslint": "npm:^8"
+    "@types/node": "npm:^20"
+    "@types/react": "npm:^18"
+    "@types/react-dom": "npm:^18"
+    autoprefixer: "npm:^10.0.1"
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"
-    eslint: "npm:^8.57.0"
+    eslint: "npm:^8"
     lucide-react: "npm:^0.363.0"
-    react: "npm:^18.2.0"
+    postcss: "npm:^8"
+    react: "npm:^18"
     tailwind-merge: "npm:^2.2.2"
     tailwindcss: "npm:^3.3.0"
     tailwindcss-animate: "npm:^1.0.7"
-    typescript: "npm:^5.3.3"
+    typescript: "npm:^5"
+  peerDependencies:
+    react: ^18
   languageName: unknown
   linkType: soft
 
@@ -788,7 +792,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:^8.56.5, @types/eslint@npm:^8.56.6":
+"@types/eslint@npm:^8":
   version: 8.56.6
   resolution: "@types/eslint@npm:8.56.6"
   dependencies:
@@ -846,7 +850,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20, @types/node@npm:^20.11.24":
+"@types/node@npm:*, @types/node@npm:^20":
   version: 20.12.2
   resolution: "@types/node@npm:20.12.2"
   dependencies:
@@ -869,7 +873,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18, @types/react-dom@npm:^18.2.19":
+"@types/react-dom@npm:^18":
   version: 18.2.23
   resolution: "@types/react-dom@npm:18.2.23"
   dependencies:
@@ -878,7 +882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18, @types/react@npm:^18.2.61":
+"@types/react@npm:*, @types/react@npm:^18":
   version: 18.2.73
   resolution: "@types/react@npm:18.2.73"
   dependencies:
@@ -2930,7 +2934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8, eslint@npm:^8.57.0":
+"eslint@npm:^8":
   version: 8.57.0
   resolution: "eslint@npm:8.57.0"
   dependencies:
@@ -5659,7 +5663,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18, react@npm:^18.2.0":
+"react@npm:^18":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -7123,7 +7127,7 @@ __metadata:
     "@repo/tailwind-config": "npm:*"
     "@repo/typescript-config": "npm:*"
     "@repo/ui": "npm:*"
-    "@types/eslint": "npm:^8.56.6"
+    "@types/eslint": "npm:^8"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"

@@ -33,8 +33,8 @@ const getSlugFromFilePath = (filePath: FilePath): Slug => {
     .replace(POST_ROOT_PATH, "")
     .replace(/(\..*)?(\.html$)/, "")
     .split(path.sep)
-    // Remove empty string elements
-    .filter((s) => s);
+    .filter((s) => s) // Remove empty string elements
+    .map((s) => encodeURI(s));
 
   return slug;
 };
@@ -66,7 +66,9 @@ const getDateFromFilePath = (filePath: FilePath): Timestamp => {
   return postDate;
 };
 
-export const getPostBySlugs = async (slug: Slug): Promise<Post> => {
+export const getPostBySlugs = async (slugUris: Slug): Promise<Post> => {
+  const slug = slugUris.map((s) => decodeURI(s));
+
   const [postNameWithoutDate] = slug.slice(-1);
   const postDirs = slug.slice(0, -1);
   const pagePattern = path.join(

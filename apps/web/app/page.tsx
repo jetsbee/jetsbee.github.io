@@ -10,7 +10,7 @@ export default async function Home() {
     <main>
       <ul className="flex flex-col gap-4 px-8 py-6 my-4 mx-auto max-w-4xl">
         {allPostMeta.map((postMeta) => {
-          const title = postMeta.uriPath.split("/").pop();
+          const title = decodeURI(postMeta.uriPath.split("/").pop() ?? "");
 
           return (
             <Link key={title} href={postMeta.uriPath}>

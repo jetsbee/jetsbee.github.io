@@ -820,6 +820,7 @@ __metadata:
     clsx: "npm:^2.1.0"
     eslint: "npm:^8"
     lucide-react: "npm:^0.363.0"
+    next: "npm:14.1.4"
     postcss: "npm:^8"
     react: "npm:^18"
     react-hook-form: "npm:^7.51.2"

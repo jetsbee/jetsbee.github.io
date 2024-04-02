@@ -756,6 +756,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@repo/blog-content@workspace:packages/blog-content":
+  version: 0.0.0-use.local
+  resolution: "@repo/blog-content@workspace:packages/blog-content"
+  dependencies:
+    "@repo/eslint-config": "npm:*"
+    "@repo/typescript-config": "npm:*"
+    eslint: "npm:^8"
+    typescript: "npm:^5"
+  languageName: unknown
+  linkType: soft
+
 "@repo/eslint-config@npm:*, @repo/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@repo/eslint-config@workspace:packages/eslint-config"

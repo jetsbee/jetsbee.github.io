@@ -20,8 +20,18 @@ interface Post extends PostMeta {
   content: string;
 }
 
+const POST_ROOT_PATH = path.join(
+  process.cwd(),
+  "..",
+  "..",
+  "packages",
+  "blog-content",
+  "src",
+  "posts"
+);
+
 const getAllPostFilePaths = async (): Promise<FilePath[]> => {
-  const postsPattern = path.join(process.cwd(), "posts", "**", "*.html");
+  const postsPattern = path.join(POST_ROOT_PATH, "**", "*.html");
   const allPostPaths = await glob(postsPattern);
 
   return allPostPaths;
@@ -29,7 +39,7 @@ const getAllPostFilePaths = async (): Promise<FilePath[]> => {
 
 const getSlugFromFilePath = (filePath: FilePath): Slug => {
   const slug = filePath
-    .replace(path.join(process.cwd(), "posts"), "")
+    .replace(POST_ROOT_PATH, "")
     .replace(/(\..*)?(\.html$)/, "")
     .split(path.sep)
     // Remove empty string elements
@@ -69,8 +79,7 @@ export const getPostBySlugs = async (slug: Slug): Promise<Post> => {
   const [postNameWithoutDate] = slug.slice(-1);
   const postDirs = slug.slice(0, -1);
   const pagePattern = path.join(
-    process.cwd(),
-    "posts",
+    POST_ROOT_PATH,
     ...postDirs,
     `${postNameWithoutDate}?(.*).html`
   );

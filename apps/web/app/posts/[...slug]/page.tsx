@@ -1,5 +1,6 @@
 import { getParams, getPostBySlugs } from "@/app/(utils)/post";
 import DOMPurify from "isomorphic-dompurify";
+import { notFound } from "next/navigation";
 
 interface Props {
   params: {
@@ -18,7 +19,8 @@ interface Props {
  * 2. Element of slug should be string.
  */
 export const generateStaticParams = async (): Promise<Props["params"][]> => {
-  return await getParams();
+  const params = await getParams();
+  return params.length > 0 ? params : Promise.resolve([{ slug: ["index"] }]);
 };
 
 export const generateMetadata = async ({ params }: Props) => {
@@ -30,7 +32,8 @@ const getPost = async (params: Props["params"]) => {
 };
 
 export default async function PostLayout({ params }: Props) {
-  const { content: post } = await getPost(params);
+  params.slug.length === 1 && params.slug[0] === "index" && notFound();
 
+  const { content: post } = await getPost(params);
   return <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post) }} />;
 }

@@ -1,7 +1,17 @@
+import DOMPurify from "isomorphic-dompurify";
 import fs from "node:fs/promises";
 import path from "node:path";
 import * as z from "zod";
-import DOMPurify from "isomorphic-dompurify";
+
+const POST_ROOT_PATH = path.join(
+  process.cwd(),
+  "..",
+  "..",
+  "packages",
+  "blog-content",
+  "src",
+  "posts"
+);
 
 const postSchema = z.object({
   title: z.string().min(0).trim(),
@@ -23,7 +33,7 @@ const savePost = async (request: Request) => {
   const postDirsAndName = title.split("/");
   const postDirs = postDirsAndName.slice(0, -1);
   const [postNameWithoutDate] = postDirsAndName.slice(-1);
-  const dirPath = path.join(process.cwd(), "posts", ...postDirs);
+  const dirPath = path.join(POST_ROOT_PATH, ...postDirs);
 
   await fs.mkdir(dirPath, { recursive: true });
   await fs.writeFile(

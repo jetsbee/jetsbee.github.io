@@ -827,7 +827,6 @@ __metadata:
     tailwindcss: "npm:^3.3.0"
     tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:^5"
-    typescript-eslint: "npm:^7.4.0"
     zod: "npm:^3.22.4"
   peerDependencies:
     react: ^18
@@ -1335,31 +1334,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:7.4.0, @typescript-eslint/eslint-plugin@npm:^7.1.0":
-  version: 7.4.0
-  resolution: "@typescript-eslint/eslint-plugin@npm:7.4.0"
-  dependencies:
-    "@eslint-community/regexpp": "npm:^4.5.1"
-    "@typescript-eslint/scope-manager": "npm:7.4.0"
-    "@typescript-eslint/type-utils": "npm:7.4.0"
-    "@typescript-eslint/utils": "npm:7.4.0"
-    "@typescript-eslint/visitor-keys": "npm:7.4.0"
-    debug: "npm:^4.3.4"
-    graphemer: "npm:^1.4.0"
-    ignore: "npm:^5.2.4"
-    natural-compare: "npm:^1.4.0"
-    semver: "npm:^7.5.4"
-    ts-api-utils: "npm:^1.0.1"
-  peerDependencies:
-    "@typescript-eslint/parser": ^7.0.0
-    eslint: ^8.56.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 10c0/840da6536da48e95602ee11450485bdba34d357f2b6dbbad4cc80d2491a3ee4eda35bd23345f4c9cfc0e3c3b05bd1257bb40ea32fe27b023252bb3177668c642
-  languageName: node
-  linkType: hard
-
 "@typescript-eslint/eslint-plugin@npm:^6.5.0":
   version: 6.21.0
   resolution: "@typescript-eslint/eslint-plugin@npm:6.21.0"
@@ -1385,21 +1359,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:7.4.0, @typescript-eslint/parser@npm:^7.1.0":
+"@typescript-eslint/eslint-plugin@npm:^7.1.0":
   version: 7.4.0
-  resolution: "@typescript-eslint/parser@npm:7.4.0"
+  resolution: "@typescript-eslint/eslint-plugin@npm:7.4.0"
   dependencies:
+    "@eslint-community/regexpp": "npm:^4.5.1"
     "@typescript-eslint/scope-manager": "npm:7.4.0"
-    "@typescript-eslint/types": "npm:7.4.0"
-    "@typescript-eslint/typescript-estree": "npm:7.4.0"
+    "@typescript-eslint/type-utils": "npm:7.4.0"
+    "@typescript-eslint/utils": "npm:7.4.0"
     "@typescript-eslint/visitor-keys": "npm:7.4.0"
     debug: "npm:^4.3.4"
+    graphemer: "npm:^1.4.0"
+    ignore: "npm:^5.2.4"
+    natural-compare: "npm:^1.4.0"
+    semver: "npm:^7.5.4"
+    ts-api-utils: "npm:^1.0.1"
   peerDependencies:
+    "@typescript-eslint/parser": ^7.0.0
     eslint: ^8.56.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/70ae32d406685e83fc26b4f4d3eb90c59965e0ff4fec4fd89ecd3cb386376bedb75cd8c11691b9de4743243d61a7d17ae242fe6c689a7c443a8977bc9755700b
+  checksum: 10c0/840da6536da48e95602ee11450485bdba34d357f2b6dbbad4cc80d2491a3ee4eda35bd23345f4c9cfc0e3c3b05bd1257bb40ea32fe27b023252bb3177668c642
   languageName: node
   linkType: hard
 
@@ -1418,6 +1399,24 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/a8f99820679decd0d115c0af61903fb1de3b1b5bec412dc72b67670bf636de77ab07f2a68ee65d6da7976039bbf636907f9d5ca546db3f0b98a31ffbc225bc7d
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/parser@npm:^7.1.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/parser@npm:7.4.0"
+  dependencies:
+    "@typescript-eslint/scope-manager": "npm:7.4.0"
+    "@typescript-eslint/types": "npm:7.4.0"
+    "@typescript-eslint/typescript-estree": "npm:7.4.0"
+    "@typescript-eslint/visitor-keys": "npm:7.4.0"
+    debug: "npm:^4.3.4"
+  peerDependencies:
+    eslint: ^8.56.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10c0/70ae32d406685e83fc26b4f4d3eb90c59965e0ff4fec4fd89ecd3cb386376bedb75cd8c11691b9de4743243d61a7d17ae242fe6c689a7c443a8977bc9755700b
   languageName: node
   linkType: hard
 
@@ -7609,22 +7608,6 @@ __metadata:
     is-typed-array: "npm:^1.1.13"
     possible-typed-array-names: "npm:^1.0.0"
   checksum: 10c0/74253d7dc488eb28b6b2711cf31f5a9dcefc9c41b0681fd1c178ed0a1681b4468581a3626d39cd4df7aee3d3927ab62be06aa9ca74e5baf81827f61641445b77
-  languageName: node
-  linkType: hard
-
-"typescript-eslint@npm:^7.4.0":
-  version: 7.4.0
-  resolution: "typescript-eslint@npm:7.4.0"
-  dependencies:
-    "@typescript-eslint/eslint-plugin": "npm:7.4.0"
-    "@typescript-eslint/parser": "npm:7.4.0"
-    "@typescript-eslint/utils": "npm:7.4.0"
-  peerDependencies:
-    eslint: ^8.56.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 10c0/e630043bc93537a601397dd059cd41504ce6df4613d703c9b59b94e4bbf8e24a0f06bfaed86aae940e832f1147cf018b6176013b5b6d989551ab190720398e30
   languageName: node
   linkType: hard
 

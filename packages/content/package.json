@@ -1,5 +1,5 @@
 {
-  "name": "@repo/blog-content",
+  "name": "@repo/content",
   "version": "0.0.0",
   "private": true,
   "exports": {

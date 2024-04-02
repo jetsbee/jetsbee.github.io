@@ -9,6 +9,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@repo/content": "*",
     "@repo/ui": "*",
     "date-fns": "^3.6.0",
     "glob": "^10.3.12",

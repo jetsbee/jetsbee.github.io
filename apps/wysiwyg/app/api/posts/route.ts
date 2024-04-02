@@ -1,17 +1,8 @@
+import { POST_PATH_FROM_APP_WORKSPACE as POST_ROOT_PATH } from "@repo/content/post-path";
 import DOMPurify from "isomorphic-dompurify";
 import fs from "node:fs/promises";
 import path from "node:path";
 import * as z from "zod";
-
-const POST_ROOT_PATH = path.join(
-  process.cwd(),
-  "..",
-  "..",
-  "packages",
-  "blog-content",
-  "src",
-  "posts"
-);
 
 const postSchema = z.object({
   title: z.string().min(0).trim(),

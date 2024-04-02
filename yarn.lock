@@ -756,9 +756,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@repo/blog-content@workspace:packages/blog-content":
+"@repo/content@npm:*, @repo/content@workspace:packages/content":
   version: 0.0.0-use.local
-  resolution: "@repo/blog-content@workspace:packages/blog-content"
+  resolution: "@repo/content@workspace:packages/content"
   dependencies:
     "@repo/eslint-config": "npm:*"
     "@repo/typescript-config": "npm:*"
@@ -7820,6 +7820,7 @@ __metadata:
   resolution: "web@workspace:apps/web"
   dependencies:
     "@next/eslint-plugin-next": "npm:^14.1.4"
+    "@repo/content": "npm:*"
     "@repo/eslint-config": "npm:*"
     "@repo/tailwind-config": "npm:*"
     "@repo/typescript-config": "npm:*"
@@ -8022,6 +8023,7 @@ __metadata:
   resolution: "wysiwyg@workspace:apps/wysiwyg"
   dependencies:
     "@next/eslint-plugin-next": "npm:^14.1.4"
+    "@repo/content": "npm:*"
     "@repo/eslint-config": "npm:*"
     "@repo/tailwind-config": "npm:*"
     "@repo/typescript-config": "npm:*"

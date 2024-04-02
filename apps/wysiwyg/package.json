@@ -9,6 +9,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@repo/content": "*",
     "@repo/ui": "*",
     "next": "14.1.4",
     "react": "^18",

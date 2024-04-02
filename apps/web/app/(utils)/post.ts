@@ -1,3 +1,4 @@
+import { POST_PATH_FROM_APP_WORKSPACE as POST_ROOT_PATH } from "@repo/content/post-path";
 import { glob } from "glob";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -19,16 +20,6 @@ interface PostMeta {
 interface Post extends PostMeta {
   content: string;
 }
-
-const POST_ROOT_PATH = path.join(
-  process.cwd(),
-  "..",
-  "..",
-  "packages",
-  "blog-content",
-  "src",
-  "posts"
-);
 
 const getAllPostFilePaths = async (): Promise<FilePath[]> => {
   const postsPattern = path.join(POST_ROOT_PATH, "**", "*.html");

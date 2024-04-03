@@ -38,7 +38,7 @@ export default async function PostLayout({ params }: Props) {
   return (
     <main className="my-8 flex flex-col items-center">
       <div
-        className="w-full max-w-4xl px-8"
+        className="w-full max-w-4xl px-8 break-words [&_p:empty]:h-4"
         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post) }}
       />
     </main>

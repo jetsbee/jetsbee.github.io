@@ -6,9 +6,9 @@ export const GlobalLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <>
+    <div className="relative flex min-h-screen flex-col">
       <GlobalHeader />
       {children}
-    </>
+    </div>
   );
 };

@@ -7,8 +7,8 @@ export default async function Home() {
     compareDesc(new Date(a.date), new Date(b.date))
   );
   return (
-    <main>
-      <ul className="flex flex-col gap-4 px-8 py-6 my-4 mx-auto max-w-4xl">
+    <main className="my-8 flex flex-col items-center">
+      <ul className="w-full max-w-4xl px-8 flex flex-col gap-4">
         {allPostMeta.map(({ title, uriPath, date }) => {
           return (
             <Link key={`${title}@${date}`} href={uriPath}>

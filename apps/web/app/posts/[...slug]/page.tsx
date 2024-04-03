@@ -35,5 +35,12 @@ export default async function PostLayout({ params }: Props) {
   params.slug.length === 1 && params.slug[0] === "index" && notFound();
 
   const { content: post } = await getPost(params);
-  return <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post) }} />;
+  return (
+    <main className="my-8 flex flex-col items-center">
+      <div
+        className="w-full max-w-4xl px-8"
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post) }}
+      />
+    </main>
+  );
 }

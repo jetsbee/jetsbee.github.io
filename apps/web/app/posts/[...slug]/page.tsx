@@ -24,7 +24,7 @@ export const generateStaticParams = async (): Promise<Props["params"][]> => {
 };
 
 export const generateMetadata = async ({ params }: Props) => {
-  return { title: params.slug.pop() };
+  return { title: decodeURI(params.slug.at(-2) ?? "") };
 };
 
 const getPost = async (params: Props["params"]) => {

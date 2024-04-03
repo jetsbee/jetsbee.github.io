@@ -9,11 +9,9 @@ export default async function Home() {
   return (
     <main>
       <ul className="flex flex-col gap-4 px-8 py-6 my-4 mx-auto max-w-4xl">
-        {allPostMeta.map((postMeta) => {
-          const title = decodeURI(postMeta.uriPath.split("/").pop() ?? "");
-
+        {allPostMeta.map(({ title, uriPath, date }) => {
           return (
-            <Link key={title} href={postMeta.uriPath}>
+            <Link key={`${title}@${date}`} href={uriPath}>
               <li>
                 <article className="rounded-md border p-2">
                   <p className="text-3xl font-medium break-words">{title}</p>

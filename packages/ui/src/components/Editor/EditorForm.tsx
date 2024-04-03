@@ -24,7 +24,6 @@ export const EditorForm = () => {
     description: z
       .string()
       .min(5, { message: "Hey the description is not long enough" })
-      .max(100, { message: "Its too long" })
       .trim(),
   });
 

@@ -4,6 +4,7 @@ import { type Editor } from "@tiptap/react";
 import { Toggle } from "@ui/components/ui/toggle";
 import {
   Bold,
+  Heading1,
   Heading2,
   Italic,
   List,
@@ -24,7 +25,16 @@ export function Toolbar({ editor }: Props) {
     <div className="border border-input bg-transparent rounded-b-md p-1 flex gap-1 mb-2">
       <Toggle
         size="sm"
-        pressed={editor.isActive("heading")}
+        pressed={editor.isActive("heading", { level: 1 })}
+        onPressedChange={() =>
+          editor.chain().focus().toggleHeading({ level: 1 }).run()
+        }
+      >
+        <Heading1 className="h-4 w-4" />
+      </Toggle>
+      <Toggle
+        size="sm"
+        pressed={editor.isActive("heading", { level: 2 })}
         onPressedChange={() =>
           editor.chain().focus().toggleHeading({ level: 2 }).run()
         }

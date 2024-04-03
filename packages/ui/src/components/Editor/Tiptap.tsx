@@ -1,7 +1,7 @@
 "use client";
 
 import Heading from "@tiptap/extension-heading";
-import { EditorContent, useEditor } from "@tiptap/react";
+import { EditorContent, mergeAttributes, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Toolbar } from "./Toolbar";
 
@@ -15,10 +15,26 @@ export default function Tiptap({
   const editor = useEditor({
     extensions: [
       StarterKit.configure(),
-      Heading.configure({
-        HTMLAttributes: { class: "text-xl font-bold" },
-        levels: [2],
-      }),
+      Heading.extend({
+        levels: [1, 2],
+        renderHTML({ node, HTMLAttributes }) {
+          const level = this.options.levels.includes(node.attrs.level)
+            ? node.attrs.level
+            : this.options.levels[0];
+          const classes: { [index: number]: string } = {
+            1: "text-2xl font-bold",
+            2: "text-xl font-bold",
+          };
+          return [
+            `h${level}`,
+            mergeAttributes(this.options.HTMLAttributes, HTMLAttributes, {
+              class: `${classes[level]}`,
+            }),
+            0,
+          ];
+        },
+      }).configure({ levels: [1, 2] }),
+      // ref. https://github.com/ueberdosis/tiptap/issues/1514#issuecomment-1573752216
     ],
     content: description,
     editorProps: {

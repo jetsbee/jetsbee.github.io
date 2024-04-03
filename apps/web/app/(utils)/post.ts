@@ -125,7 +125,7 @@ export const getPostBySlugs = async (slugUris: Slug): Promise<Post> => {
   const rawContent = await fs.readFile(pageFilePath);
   const htmlString = rawContent.toString("utf-8");
   const uriPath = getUriPathFromFilePath(pageFilePath);
-  const title = uriPath.split("/").pop() ?? "";
+  const title = decodeURI(uriPath.split("/").at(-2) ?? "");
 
   return { content: htmlString, date: postDate, uriPath, title };
 };

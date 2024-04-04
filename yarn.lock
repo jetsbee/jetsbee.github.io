@@ -2079,17 +2079,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"blog@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "blog@workspace:."
-  dependencies:
-    "@repo/eslint-config": "npm:*"
-    "@repo/typescript-config": "npm:*"
-    prettier: "npm:^3.2.5"
-    turbo: "npm:latest"
-  languageName: unknown
-  linkType: soft
-
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -5316,6 +5305,17 @@ __metadata:
   checksum: 10c0/cafd28388e698e1138ace947929f842944d0f1c0b87d3fa2601a61b38dc89397d33c0ce2c8e7b99e968584b91d15f6810b91bef3f3826adf71b1833b61d4bf4f
   languageName: node
   linkType: hard
+
+"next-blog-gen@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "next-blog-gen@workspace:."
+  dependencies:
+    "@repo/eslint-config": "npm:*"
+    "@repo/typescript-config": "npm:*"
+    prettier: "npm:^3.2.5"
+    turbo: "npm:latest"
+  languageName: unknown
+  linkType: soft
 
 "next@npm:14.1.4":
   version: 14.1.4

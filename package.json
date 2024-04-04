@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "next-blog-gen",
   "private": true,
   "scripts": {
     "build": "turbo build",

@@ -14,7 +14,7 @@ This Turborepo includes the following packages/apps:
 - `@repo/ui`: a React component library shared by both `web` and `wysiwyg` applications
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-- `@tailwind-config`: `tailwindcss` configurations
+- `@repo/tailwind-config`: `tailwindcss` configurations
 
 ### Utilities
 

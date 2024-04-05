@@ -1,4 +1,4 @@
-import { GlobalHeader } from "../GlobalHeader/GlobalHeader";
+import { GlobalHeader } from "@ui/entities/GlobalHeader";
 
 export const GlobalLayout = ({
   children,

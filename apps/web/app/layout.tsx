@@ -1,5 +1,5 @@
-import { GlobalLayout } from "@repo/ui/components/GlobalLayout/GlobalLayout";
 import "@repo/ui/globals.css";
+import { GlobalLayout } from "@repo/ui/widgets";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 

@@ -11,7 +11,8 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@ui/components",
-    "utils": "@ui/lib/utils"
+    "components": "@ui/shared/components",
+    "utils": "@ui/shared/utils/twailwindHelper",
+    "ui": "@ui/shared/components/ui"
   }
 }

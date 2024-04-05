@@ -1,4 +1,4 @@
-import { EditorForm } from "@repo/ui/components/Editor/EditorForm";
+import { EditorForm } from "@repo/ui/widgets";
 
 export default function Page() {
   return (

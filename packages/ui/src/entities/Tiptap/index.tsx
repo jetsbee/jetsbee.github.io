@@ -5,13 +5,13 @@ import { EditorContent, mergeAttributes, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Toolbar } from "./Toolbar";
 
-export default function Tiptap({
+export const Tiptap = ({
   description,
   onChange,
 }: {
   description: string;
   onChange: (richText: string) => void;
-}) {
+}) => {
   const editor = useEditor({
     extensions: [
       StarterKit.configure(),
@@ -54,4 +54,4 @@ export default function Tiptap({
       <EditorContent editor={editor} />
     </div>
   );
-}
+};

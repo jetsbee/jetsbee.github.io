@@ -1,7 +1,7 @@
 "use client";
 
 import { type Editor } from "@tiptap/react";
-import { Toggle } from "@ui/components/ui/toggle";
+import { Toggle } from "@ui/shared/components/ui/toggle";
 import {
   Bold,
   Heading1,

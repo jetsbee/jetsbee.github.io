@@ -1,7 +1,8 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@ui/components/ui/button";
+import { Tiptap } from "@ui/entities/Tiptap";
+import { Button } from "@ui/shared/components/ui/button";
 import {
   Form,
   FormControl,
@@ -9,11 +10,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@ui/components/ui/form";
-import { Input } from "@ui/components/ui/input";
+} from "@ui/shared/components/ui/form";
+import { Input } from "@ui/shared/components/ui/input";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import Tiptap from "./Tiptap";
 
 export const EditorForm = () => {
   const formSchema = z.object({

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --port 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "serve out",
     "deploy": "gh-pages --dist out --nojekyll",
     "lint": "eslint . --max-warnings 0"
   },
@@ -33,6 +33,7 @@
     "eslint": "^8",
     "gh-pages": "^6.1.1",
     "postcss": "^8",
+    "serve": "^14.2.1",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

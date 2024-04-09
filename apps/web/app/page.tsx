@@ -11,13 +11,13 @@ export default async function Home() {
       <ul className="w-full max-w-4xl px-8 flex flex-col gap-4">
         {allPostMeta.map(({ title, uriPath, date }) => {
           return (
-            <Link key={`${title}@${date}`} href={uriPath}>
-              <li>
+            <li>
+              <Link key={`${title}@${date}`} href={uriPath}>
                 <article className="rounded-md border p-2">
                   <p className="text-3xl font-medium break-words">{title}</p>
                 </article>
-              </li>
-            </Link>
+              </Link>
+            </li>
           );
         })}
       </ul>
